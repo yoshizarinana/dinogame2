@@ -1,0 +1,69 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.scoreboard {
+    font-size: 22px;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.game {
+    width: 600px;
+    height: 220px;
+    border: 3px solid black;
+    margin: auto;
+    position: relative;
+    overflow: hidden;
+    background: white;
+}
+
+#character {
+    width: 40px;
+    height: 50px;
+    background-image: url("imgs/dinorunf23.gif");
+    background-size: cover;
+    position: absolute;
+    bottom: 0;
+    left: 50px;
+}
+
+#block {
+    width: 25px;
+    height: 40px;
+    background-image: url("imgs/cactus.png");
+    background-size: cover;
+    position: absolute;
+    bottom: 0;
+    left: 600px;
+    animation: block 1.2s infinite linear;
+}
+
+.animate {
+    animation: jump 0.5s linear;
+}
+
+@keyframes jump {
+    0% {
+        bottom: 0;
+    }
+
+    50% {
+        bottom: 100px;
+    }
+
+    100% {
+        bottom: 0;
+    }
+}
+
+@keyframes block {
+    0% {
+        left: 600px;
+    }
+
+    100% {
+        left: -40px;
+    }
+}
